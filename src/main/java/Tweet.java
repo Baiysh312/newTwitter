@@ -10,7 +10,7 @@ public class Tweet {
     public Tweet(String content, User author) {
         this.content = content;
         this.author = author;
-        this.comments = new ArrayList<String>();
+        this.comments = new ArrayList<>();
         this.likes = 0;
     }
 

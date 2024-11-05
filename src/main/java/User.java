@@ -52,4 +52,16 @@ public class User {
     public List<User> getFollowing() {
         return following;
     }
+
+
+    public String toStr(){
+        StringBuilder userData= new StringBuilder(username+","+password+"\n");
+        userData.append("\n");
+        for (Tweet tweet:tweets) {
+            userData.append("- ").append(tweet.getContent()).append("\n");
+            for (String str:tweet.getComments()) {
+                userData.append("_ ").append(str).append("\n");
+            }
+        }return userData.toString();
+    }
 }
